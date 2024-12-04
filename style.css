@@ -1,0 +1,53 @@
+.title{
+    text-align: center;
+}
+
+.title::before{
+    content: 'Hi!';
+}
+.title::after{
+    content: '\2726';
+}
+
+.link::before{
+    content: url(./assets/icons/credit-card-marker.svg);
+    display: inline-block;
+    width: 25px;
+    width: 25px;
+}
+
+.link:hover::before{
+    content: url(./assets/icons/account.svg)
+}
+
+.paper{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: black;
+    z-index: 10;
+}
+
+.paper::before,
+.paper::after{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: black;;
+    position: absolute;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.paper::before{
+    background-color: gold;
+    z-index: -2;
+    transform: rotate(3deg) translateX(7px);
+}
+
+.paper::after{
+    background-color: lightskyblue;
+    z-index: -2;
+    transform: rotate(-2deg) translateY(20px);
+}
